@@ -24,9 +24,8 @@ module.exports = {
             }
             return res.status(200).render('title', { url: myObj })
         } else {
-            res.status(404).send('Site not reachable!')
-            console.log('no addess')
-            return res.send('No Web address')
+            return res.status(404).send('Site not reachable!')
+            
         }
     }
 }
