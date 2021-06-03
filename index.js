@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
-var address = require('./routes/address');
+const address = require('./routes/address');
 
 app.set('view engine', 'ejs')
 
 app.use('/I/want/title', address)
 
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+app.use((req, res, next) => {
+    let err = new Error('Not Found');
     err.status = 404;
     next(err);
 });

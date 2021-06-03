@@ -1,5 +1,5 @@
 const express = require('express');
-const controller = require('../controllers/data')
+const controller = require('../controllers/title')
 let router = express.Router();
 
 router.get('/', controller.fetchTitlesFromUrl)
